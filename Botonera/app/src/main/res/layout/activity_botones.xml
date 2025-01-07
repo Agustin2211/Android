@@ -273,9 +273,119 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical"></LinearLayout>
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonEstoNoEsSerioVieja"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="Button"
+                        android:background="@drawable/boton"
+                        app:backgroundTint="@null"/>
+
+                    <TextView
+                        android:id="@+id/tvEstoNoEsSerioVieja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Esto no es serio vieja"
+                        android:fontFamily="sans-serif-black"
+                        android:textAlignment="center"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
             </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonRutinaUNNOBA"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/boton"
+                        android:text="Button"
+                        app:backgroundTint = "@null"/>
+
+                    <TextView
+                        android:id="@+id/tvRutinaUNNOBA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:textAlignment="center"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:text="Rutina de la U.N.N.O.B.A."
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonNoEsSerioEstoVieja"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/boton"
+                        android:text="Button"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+                        android:id="@+id/tvNoEsSerioVieja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Esto No Es Serio Vieja"
+                        android:textAlignment="center"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
