@@ -1,12 +1,22 @@
 package com.example.botonera;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
+import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +27,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Botones extends AppCompatActivity {
 
     private int contadorBotonesPresionados = 0;
-    private int totalBotones = 7;
+    private int totalBotones = 12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,12 @@ public class Botones extends AppCompatActivity {
         Button buttonTodoParaDecirQue = findViewById(R.id.buttonTodoParaDecirQue);
         Button buttonTodoParaDecirQueTieneContactos = findViewById(R.id.buttonTodoParaDecirQueTieneContactos);
         Button buttonTodoParaDecirQueLoVienenABuscar = findViewById(R.id.buttonTodoParaDecirQueLoVienenABuscar);
+        Button buttonEstoNoEsSerioVieja = findViewById(R.id.buttonEstoNoEsSerioVieja);
+        Button buttonRutinaUNNOBA = findViewById(R.id.buttonRutinaUNNOBA);
+        Button buttonInvestiguenCarajo = findViewById(R.id.buttonInvestiguenCarajo);
+        Button buttonBalazo = findViewById(R.id.buttonBalazo);
+        Button buttonRespiracion = findViewById(R.id.buttonRespiracion);
+        Button buttonBait = findViewById(R.id.buttonBait);
         Button buttonXD = findViewById(R.id.buttonXD);
 
         TextView tvCuandoVosTenesCalle = findViewById(R.id.tvCuandoVosTenesCalle);
@@ -52,6 +68,12 @@ public class Botones extends AppCompatActivity {
         TextView tvTodoParaDecirQue = findViewById(R.id.tvTodoParaDecirQue);
         TextView tvTodoParaDecirQueTienenContactos = findViewById(R.id.tvTodoParaDecirQueTieneContactos);
         TextView tvTodoParaDecirQueLoVienenABuscar = findViewById(R.id.tvTodoParaDecirQueLoVienenABuscar);
+        TextView tvEstoNoEsSerioVieja = findViewById(R.id.tvEstoNoEsSerioVieja);
+        TextView tvRutinaUNNOBA = findViewById(R.id.tvRutinaUNNOBA);
+        TextView tvInvestiguenCarajo = findViewById(R.id.tvInvestiguenCarajo);
+        TextView tvBalazo = findViewById(R.id.tvBalazo);
+        TextView tvRespiracion = findViewById(R.id.tvRespiracion);
+        TextView tvBait = findViewById(R.id.tvBait);
         TextView tvXD = findViewById(R.id.tvXD);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -158,6 +180,94 @@ public class Botones extends AppCompatActivity {
             }
         });
 
+        buttonEstoNoEsSerioVieja.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvEstoNoEsSerioVieja.startAnimation(fadeInAnimation);
+                tvEstoNoEsSerioVieja.setVisibility(View.VISIBLE);
+
+                contadorBotonesPresionados++;
+                if (contadorBotonesPresionados == totalBotones) {
+                    cambiarVisibilidad(tvXD, buttonXD, fadeInAnimation);
+                }
+            }
+        });
+
+        buttonRutinaUNNOBA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvRutinaUNNOBA.startAnimation(fadeInAnimation);
+                tvRutinaUNNOBA.setVisibility(View.VISIBLE);
+
+                contadorBotonesPresionados++;
+                if (contadorBotonesPresionados == totalBotones) {
+                    cambiarVisibilidad(tvXD, buttonXD, fadeInAnimation);
+                }
+            }
+        });
+
+        buttonInvestiguenCarajo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvInvestiguenCarajo.startAnimation(fadeInAnimation);
+                tvInvestiguenCarajo.setVisibility(View.VISIBLE);
+
+                contadorBotonesPresionados++;
+                if (contadorBotonesPresionados == totalBotones) {
+                    cambiarVisibilidad(tvXD, buttonXD, fadeInAnimation);
+                }
+            }
+        });
+
+        buttonBalazo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvBalazo.startAnimation(fadeInAnimation);
+                tvBalazo.setVisibility(View.VISIBLE);
+
+                contadorBotonesPresionados++;
+                if (contadorBotonesPresionados == totalBotones) {
+                    cambiarVisibilidad(tvXD, buttonXD, fadeInAnimation);
+                }
+            }
+        });
+
+        //TODO Button Respiracion
+        buttonRespiracion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mpDefinicionDePala.start();
+                tvRespiracion.startAnimation(fadeInAnimation);
+                tvRespiracion.setVisibility(View.VISIBLE);
+
+                contadorBotonesPresionados++;
+                if (contadorBotonesPresionados == totalBotones) {
+                    cambiarVisibilidad(tvXD, buttonXD, fadeInAnimation);
+                }
+
+                mpDefinicionDePala.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mostrarDialogoVideo();
+                    }
+                });
+            }
+        });
+
+        buttonBait.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvBait.startAnimation(fadeInAnimation);
+                tvBait.setVisibility(View.VISIBLE);
+
+                contadorBotonesPresionados++;
+                if (contadorBotonesPresionados == totalBotones) {
+                    cambiarVisibilidad(tvXD, buttonXD, fadeInAnimation);
+                }
+            }
+        });
+
+        //TODO BOTON FINAL
         buttonXD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -166,10 +276,39 @@ public class Botones extends AppCompatActivity {
         });
     }
 
+
+    //TODO FUNCIONES
     private void cambiarVisibilidad(TextView tvXD, Button buttonXD, Animation fadeInAnimation){
         tvXD.startAnimation(fadeInAnimation);
         buttonXD.startAnimation(fadeInAnimation);
         tvXD.setVisibility(View.VISIBLE);
         buttonXD.setVisibility(View.VISIBLE);
+    }
+
+    private void mostrarDialogoVideo() {
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_video);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        dialog.getWindow().getDecorView().setVisibility(View.INVISIBLE);
+        dialog.getWindow().getDecorView().post(new Runnable() {
+            @Override
+            public void run() {
+                dialog.getWindow().getDecorView().startAnimation(AnimationUtils.loadAnimation(Botones.this, R.anim.fade_in));
+                dialog.getWindow().getDecorView().setVisibility(View.VISIBLE);
+            }
+        });
+
+        VideoView videoView = dialog.findViewById(R.id.videoView);
+        Button buttonClose = dialog.findViewById(R.id.buttonCerrar);
+
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.outro_coscu);
+        videoView.setVideoURI(videoUri);
+        videoView.start();
+
+        buttonClose.setOnClickListener(v -> dialog.dismiss());
+
+        dialog.show();
     }
 }

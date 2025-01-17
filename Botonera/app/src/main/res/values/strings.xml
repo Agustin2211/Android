@@ -2,4 +2,5 @@
     <string name="app_name">Botonera</string>
     <string name="introduccion">Bueno pa/ma, esto es muy simple. \n \n A medida que vas apretando los botones, estos van a hacer un sonido y abajo aparece la descripcion del respectivo sonido que hace.\n \n Antes de que me olvide, una vez que hayas escuchado todos los botones, desbloqueas el boton final que te va a hacer reir de una forma descomunal.\n \n Saludos y que se divierta apretando botones.</string>
     <string name="continuar">CONTINUAR</string>
+    <string name="cerrar">CERRAR</string>
 </resources>

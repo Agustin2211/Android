@@ -1,232 +1,401 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Botones"
-    android:background="@color/black">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Botones"
+        android:background="@color/black"
+        android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/buttonCuandoVosTenesCalle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/boton"
+                    android:fontFamily="sans-serif-black"
+                    android:textAlignment="center"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvCuandoVosTenesCalle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    >
-
-                    <Button
-                        android:id="@+id/buttonCuandoVosTenesCalle"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@mipmap/boton"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        app:backgroundTint="@null" />
-
-                    <TextView
-                        android:id="@+id/tvCuandoVosTenesCalle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:padding="10dp"
-                        android:text="Cuando vos tenes calle, pasan estas cosas"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/buttonDefinicionDeCalle"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@mipmap/boton"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        app:backgroundTint="@null" />
-
-                    <TextView
-                        android:id="@+id/tvDefinicionDeCalle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:padding="10dp"
-                        android:text="Definicion de Calle"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Cuando vos tenes calle, pasan estas cosas"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonDefinicionDeCalle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/boton"
+                    android:fontFamily="sans-serif-black"
+                    android:textAlignment="center"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvDefinicionDeCalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Definicion de Calle"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonDefinicionDePala"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/boton"
+                    android:fontFamily="sans-serif-black"
+                    android:textAlignment="center"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvDefinicionDePala"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Definicion de Pala"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonSeMalinterpreta"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/boton"
+                    android:fontFamily="sans-serif-black"
+                    android:textAlignment="center"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvSeMalinterpreta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Se Malinterpreta"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:padding="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                <Button
+                    android:id="@+id/buttonTodoParaDecirQue"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/boton"
+                    android:fontFamily="sans-serif-black"
+                    android:textAlignment="center"
+                    app:backgroundTint="@null" />
 
-                    <Button
-                        android:id="@+id/buttonDefinicionDePala"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@mipmap/boton"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        app:backgroundTint="@null" />
-
-                    <TextView
-                        android:id="@+id/tvDefinicionDePala"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:padding="10dp"
-                        android:text="Definicion de Pala"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/buttonSeMalinterpreta"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@mipmap/boton"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        app:backgroundTint="@null" />
-
-                    <TextView
-                        android:id="@+id/tvSeMalinterpreta"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:padding="10dp"
-                        android:text="Se Malinterpreta"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvTodoParaDecirQue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Todo para decir que"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonTodoParaDecirQueTieneContactos"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/boton"
+                    android:fontFamily="sans-serif-black"
+                    android:textAlignment="center"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvTodoParaDecirQueTieneContactos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Todo para decir que tiene contactos"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/buttonTodoParaDecirQueLoVienenABuscar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvTodoParaDecirQueLoVienenABuscar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Todo para decir que lo vienen a buscar"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
 
-                    <Button
-                        android:id="@+id/buttonTodoParaDecirQue"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@mipmap/boton"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        app:backgroundTint="@null" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tvTodoParaDecirQue"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:padding="10dp"
-                        android:text="Todo para decir que"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
+                <Button
+                    android:id="@+id/buttonEstoNoEsSerioVieja"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tvEstoNoEsSerioVieja"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Esto no es serio vieja"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
 
-                    <Button
-                        android:id="@+id/buttonTodoParaDecirQueTieneContactos"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@mipmap/boton"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        app:backgroundTint="@null" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/tvTodoParaDecirQueTieneContactos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-black"
-                        android:padding="10dp"
-                        android:text="Todo para decir que tiene contactos"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonRutinaUNNOBA"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvRutinaUNNOBA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Rutina de la U.N.N.O.B.A."
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonInvestiguenCarajo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvInvestiguenCarajo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Esto No Es Serio Vieja"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonBalazo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvBalazo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Me quiero pegar un balazo acá mismo"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonRespiracion"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvRespiracion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Respiración Automática Desactivada"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
             </LinearLayout>
 
         </LinearLayout>
@@ -234,205 +403,83 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/buttonBait"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvBait"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/buttonTodoParaDecirQueLoVienenABuscar"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/boton"
-                        android:text="Button"
-                        app:backgroundTint="@null" />
-
-                    <TextView
-                        android:id="@+id/tvTodoParaDecirQueLoVienenABuscar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:text="Todo para decir que lo vienen a buscar"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/buttonEstoNoEsSerioVieja"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:text="Button"
-                        android:background="@drawable/boton"
-                        app:backgroundTint="@null"/>
-
-                    <TextView
-                        android:id="@+id/tvEstoNoEsSerioVieja"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Esto no es serio vieja"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="Era Bait"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"></LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/buttonXD"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boton"
+                    android:text="Button"
+                    android:visibility="gone"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvXD"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/buttonRutinaUNNOBA"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/boton"
-                        android:text="Button"
-                        app:backgroundTint = "@null"/>
-
-                    <TextView
-                        android:id="@+id/tvRutinaUNNOBA"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:text="Rutina de la U.N.N.O.B.A."
-                        android:visibility="gone" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/buttonNoEsSerioEstoVieja"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/boton"
-                        android:text="Button"
-                        app:backgroundTint="@null" />
-
-                    <TextView
-                        android:id="@+id/tvNoEsSerioVieja"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:text="Esto No Es Serio Vieja"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
+                    android:fontFamily="sans-serif-black"
+                    android:padding="10dp"
+                    android:text="XD"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
             </LinearLayout>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:visibility="visible">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/buttonXD"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/boton"
-                        android:text="Button"
-                        android:visibility="gone"
-                        app:backgroundTint="@null" />
-
-                    <TextView
-                        android:id="@+id/tvXD"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-black"
-                        android:padding="10dp"
-                        android:text="XD"
-                        android:textAlignment="center"
-                        android:textColor="@color/red"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-                </LinearLayout>
-
-            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
