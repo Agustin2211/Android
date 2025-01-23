@@ -328,7 +328,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:padding="10dp"
-                    android:text="Esto No Es Serio Vieja"
+                    android:text="Investiguen Carajo"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textStyle="bold"

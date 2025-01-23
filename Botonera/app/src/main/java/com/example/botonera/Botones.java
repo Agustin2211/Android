@@ -27,7 +27,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Botones extends AppCompatActivity {
 
     private int contadorBotonesPresionados = 0;
-    private int totalBotones = 12;
+    private int totalBotones = 13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,13 @@ public class Botones extends AppCompatActivity {
         MediaPlayer mpSeMalinterpreta = MediaPlayer.create(this, R.raw.se_malinterpreta);
         MediaPlayer mpTodoParaDecirQue = MediaPlayer.create(this, R.raw.todo_para_decir_que);
         MediaPlayer mpTodoParaDecirQueTieneContactos = MediaPlayer.create(this, R.raw.todo_para_decir_que_tiene_contactos);
-
+        MediaPlayer mpTodoParaDecirQueLoVienenABuscar = MediaPlayer.create(this, R.raw.todo_para_decir_que_lo_vienen_a_buscar);
+        MediaPlayer mpEstoNoEsSerioVieja = MediaPlayer.create(this, R.raw.esto_no_es_serio_vieja);
+        MediaPlayer mpRutinaUNNOBA = MediaPlayer.create(this, R.raw.rutina_unnoba);
+        MediaPlayer mpInvestiguenCarajo = MediaPlayer.create(this, R.raw.investiguen_carajo);
+        MediaPlayer mpBalazo = MediaPlayer.create(this, R.raw.balazo);
+        MediaPlayer mpRespiracion = MediaPlayer.create(this, R.raw.respiracion_automatica_desactivada);
+        MediaPlayer mpBait = MediaPlayer.create(this, R.raw.era_bait);
         MediaPlayer mpXD = MediaPlayer.create(this, R.raw.xd);
 
         Button buttonCuandoVosTenesCalle = findViewById(R.id.buttonCuandoVosTenesCalle);
@@ -170,6 +176,7 @@ public class Botones extends AppCompatActivity {
         buttonTodoParaDecirQueLoVienenABuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mpTodoParaDecirQueLoVienenABuscar.start();
                 tvTodoParaDecirQueLoVienenABuscar.startAnimation(fadeInAnimation);
                 tvTodoParaDecirQueLoVienenABuscar.setVisibility(View.VISIBLE);
 
@@ -183,6 +190,7 @@ public class Botones extends AppCompatActivity {
         buttonEstoNoEsSerioVieja.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mpEstoNoEsSerioVieja.start();
                 tvEstoNoEsSerioVieja.startAnimation(fadeInAnimation);
                 tvEstoNoEsSerioVieja.setVisibility(View.VISIBLE);
 
@@ -196,6 +204,7 @@ public class Botones extends AppCompatActivity {
         buttonRutinaUNNOBA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mpRutinaUNNOBA.start();
                 tvRutinaUNNOBA.startAnimation(fadeInAnimation);
                 tvRutinaUNNOBA.setVisibility(View.VISIBLE);
 
@@ -209,6 +218,7 @@ public class Botones extends AppCompatActivity {
         buttonInvestiguenCarajo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mpInvestiguenCarajo.start();
                 tvInvestiguenCarajo.startAnimation(fadeInAnimation);
                 tvInvestiguenCarajo.setVisibility(View.VISIBLE);
 
@@ -222,6 +232,7 @@ public class Botones extends AppCompatActivity {
         buttonBalazo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mpBalazo.start();
                 tvBalazo.startAnimation(fadeInAnimation);
                 tvBalazo.setVisibility(View.VISIBLE);
 
@@ -236,16 +247,15 @@ public class Botones extends AppCompatActivity {
         buttonRespiracion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mpDefinicionDePala.start();
+                mpRespiracion.start();
                 tvRespiracion.startAnimation(fadeInAnimation);
                 tvRespiracion.setVisibility(View.VISIBLE);
-
                 contadorBotonesPresionados++;
                 if (contadorBotonesPresionados == totalBotones) {
                     cambiarVisibilidad(tvXD, buttonXD, fadeInAnimation);
                 }
 
-                mpDefinicionDePala.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                mpRespiracion.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mediaPlayer) {
                         mostrarDialogoVideo();
@@ -257,6 +267,7 @@ public class Botones extends AppCompatActivity {
         buttonBait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mpBait.start();
                 tvBait.startAnimation(fadeInAnimation);
                 tvBait.setVisibility(View.VISIBLE);
 
