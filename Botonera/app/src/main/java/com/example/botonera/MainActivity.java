@@ -2,8 +2,6 @@ package com.example.botonera;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.sax.StartElementListener;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button continuar = findViewById(R.id.continuar);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.buttonGuardaloParaElTP), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
